@@ -4,6 +4,8 @@
  */
 package practica.pkg08.lopez.rosales.jesus.alejandro;
 
+import javax.swing.JOptionPane;
+
 public class Cola {
 
     public Nodo cola;
@@ -12,46 +14,46 @@ public class Cola {
         cola = null;
     }
 
-    public String encolar(int v) {
+    public void encolar(int v) {
         Nodo nuevo = new Nodo(v);
         if (cola == null) {
             cola = nuevo;
-            return "El elemento " + v + " ha sido insertado en la cola.";
         } else {
             Nodo aux = cola;
             while (aux.getNodoSiguiente() != null) {
                 aux = aux.getNodoSiguiente();
             }
             aux.setNodoSiguiente(nuevo);
-            return "El elemento " + v + " ha sido insertado en la cola.";
         }
+        JOptionPane.showMessageDialog(null, "Valor encolado.");
     }
 
-    public String recorrerCola() {
+    public void recorrerCola() {
         Nodo aux = cola;
-        String elementos = "";
         if (cola == null) {
-            elementos = "La cola está vacía.";
+            JOptionPane.showMessageDialog(null, "La cola está vacía.");
         } else {
+            String valores = "";
             while (aux != null) {
-                elementos += "Valor: " + aux.getValor() + "\n";
+                valores += "Valor: " + aux.getValor() + "\n";
                 aux = aux.getNodoSiguiente();
             }
+            JOptionPane.showMessageDialog(null, valores);
         }
-        return elementos;
     }
 
-    public String desencolar() {
+    public void desencolar() {
         Nodo aux = cola;
         if (cola == null) {
-            return "La cola está vacía.";
+            JOptionPane.showMessageDialog(null, "La cola está vacía.");
         } else {
             if (aux.getNodoSiguiente() == null) {
                 cola = null;
             } else {
                 cola = aux.getNodoSiguiente();
             }
-            return "El primer elemento eliminado de la cola es: " + aux.getValor();
+            JOptionPane.showMessageDialog(null, "Primer elemento eliminado de la cola.");
         }
     }
+
 }

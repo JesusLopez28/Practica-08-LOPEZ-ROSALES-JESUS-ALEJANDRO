@@ -6,8 +6,13 @@ package practica.pkg08.lopez.rosales.jesus.alejandro;
 
 public class FormMenu extends javax.swing.JFrame {
 
+    private Pila pila;
+    private Cola cola;
+    
     public FormMenu() {
         initComponents();
+        pila = new Pila();
+        cola = new Cola();
     }
 
     @SuppressWarnings("unchecked")

@@ -4,6 +4,8 @@
  */
 package practica.pkg08.lopez.rosales.jesus.alejandro;
 
+import javax.swing.JOptionPane;
+
 public class Pila {
 
     public Nodo pila;
@@ -12,44 +14,43 @@ public class Pila {
         pila = null;
     }
 
-    public String push(int v) {
+    public void push(int v) {
         Nodo nuevo = new Nodo(v);
         if (pila == null) {
             pila = nuevo;
-            return "El elemento " + v + " ha sido insertado en la pila.";
         } else {
             Nodo aux = pila;
             pila = nuevo;
             nuevo.setNodoSiguiente(aux);
-            return "El elemento " + v + " ha sido insertado en la pila.";
         }
+        JOptionPane.showMessageDialog(null, "Valor agregado a la pila.");
     }
 
-    public String recorrerPila() {
+    public void recorrerPila() {
         Nodo aux = pila;
-        String elementos = "";
         if (pila == null) {
-            elementos = "La pila está vacía.";
+            JOptionPane.showMessageDialog(null, "La pila está vacía.");
         } else {
+            String valores = "";
             while (aux != null) {
-                elementos += "Valor: " + aux.getValor() + "\n";
+                valores += "Valor: " + aux.getValor() + "\n";
                 aux = aux.getNodoSiguiente();
             }
+            JOptionPane.showMessageDialog(null, valores);
         }
-        return elementos;
     }
 
-    public String pop() {
+    public void pop() {
         Nodo aux = pila;
         if (pila == null) {
-            return "La pila está vacía.";
+            JOptionPane.showMessageDialog(null, "La pila está vacía.");
         } else {
             if (aux.getNodoSiguiente() == null) {
                 pila = null;
             } else {
                 pila = aux.getNodoSiguiente();
             }
-            return "El elemento eliminado de la pila es: " + aux.getValor();
+            JOptionPane.showMessageDialog(null, "Primer elemento eliminado de la pila.");
         }
     }
 
