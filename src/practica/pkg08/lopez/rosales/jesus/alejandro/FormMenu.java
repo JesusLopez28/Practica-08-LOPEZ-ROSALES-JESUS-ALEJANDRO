@@ -14,17 +14,70 @@ public class FormMenu extends javax.swing.JFrame {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
+        lbTitulo = new javax.swing.JLabel();
+        menu = new javax.swing.JMenuBar();
+        menuPila = new javax.swing.JMenu();
+        itemPush = new javax.swing.JMenuItem();
+        itemRecorrerPila = new javax.swing.JMenuItem();
+        itemPop = new javax.swing.JMenuItem();
+        menuCola = new javax.swing.JMenu();
+        itemEncolar = new javax.swing.JMenuItem();
+        itemRecorrerCola = new javax.swing.JMenuItem();
+        itemDesencolar = new javax.swing.JMenuItem();
+
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
+
+        lbTitulo.setFont(new java.awt.Font("Nirmala UI", 1, 24)); // NOI18N
+        lbTitulo.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        lbTitulo.setText("Menú de opciones");
+
+        menu.setFont(new java.awt.Font("Nirmala UI", 0, 18)); // NOI18N
+
+        menuPila.setText("Pila");
+        menuPila.setFont(new java.awt.Font("Nirmala UI", 0, 18)); // NOI18N
+
+        itemPush.setText("Push");
+        menuPila.add(itemPush);
+
+        itemRecorrerPila.setText("Recorrer");
+        menuPila.add(itemRecorrerPila);
+
+        itemPop.setText("Pop");
+        menuPila.add(itemPop);
+
+        menu.add(menuPila);
+
+        menuCola.setText("Cola");
+        menuCola.setFont(new java.awt.Font("Nirmala UI", 0, 18)); // NOI18N
+
+        itemEncolar.setText("Encolar");
+        menuCola.add(itemEncolar);
+
+        itemRecorrerCola.setText("Recorrer");
+        menuCola.add(itemRecorrerCola);
+
+        itemDesencolar.setText("Desencolar");
+        menuCola.add(itemDesencolar);
+
+        menu.add(menuCola);
+
+        setJMenuBar(menu);
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 400, Short.MAX_VALUE)
+            .addGroup(layout.createSequentialGroup()
+                .addContainerGap()
+                .addComponent(lbTitulo, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addContainerGap())
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 300, Short.MAX_VALUE)
+            .addGroup(layout.createSequentialGroup()
+                .addContainerGap()
+                .addComponent(lbTitulo, javax.swing.GroupLayout.PREFERRED_SIZE, 52, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
 
         pack();
@@ -54,5 +107,15 @@ public class FormMenu extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JMenuItem itemDesencolar;
+    private javax.swing.JMenuItem itemEncolar;
+    private javax.swing.JMenuItem itemPop;
+    private javax.swing.JMenuItem itemPush;
+    private javax.swing.JMenuItem itemRecorrerCola;
+    private javax.swing.JMenuItem itemRecorrerPila;
+    private javax.swing.JLabel lbTitulo;
+    private javax.swing.JMenuBar menu;
+    private javax.swing.JMenu menuCola;
+    private javax.swing.JMenu menuPila;
     // End of variables declaration//GEN-END:variables
 }
