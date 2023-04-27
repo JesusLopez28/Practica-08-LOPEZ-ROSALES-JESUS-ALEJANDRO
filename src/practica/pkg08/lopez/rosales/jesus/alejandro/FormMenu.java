@@ -4,11 +4,13 @@
  */
 package practica.pkg08.lopez.rosales.jesus.alejandro;
 
+import javax.swing.JOptionPane;
+
 public class FormMenu extends javax.swing.JFrame {
 
     private Pila pila;
     private Cola cola;
-    
+
     public FormMenu() {
         initComponents();
         pila = new Pila();
@@ -120,32 +122,52 @@ public class FormMenu extends javax.swing.JFrame {
 
     private void itemPushActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_itemPushActionPerformed
         // TODO add your handling code here:
-        
+        String valorStr = JOptionPane.showInputDialog(null, "Ingrese un valor para agregar a la pila:");
+
+        int valor;
+        try {
+            valor = Integer.parseInt(valorStr);
+        } catch (NumberFormatException e) {
+            JOptionPane.showMessageDialog(null, "Debe ingresar un valor numérico.");
+            return;
+        }
+
+        pila.push(valor);
     }//GEN-LAST:event_itemPushActionPerformed
 
     private void itemRecorrerPilaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_itemRecorrerPilaActionPerformed
         // TODO add your handling code here:
-        
+        pila.recorrerPila();
     }//GEN-LAST:event_itemRecorrerPilaActionPerformed
 
     private void itemPopActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_itemPopActionPerformed
         // TODO add your handling code here:
-        
+        pila.pop();
     }//GEN-LAST:event_itemPopActionPerformed
 
     private void itemEncolarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_itemEncolarActionPerformed
         // TODO add your handling code here:
-        
+        String valorStr = JOptionPane.showInputDialog(null, "Ingrese un valor para agregar a la cola:");
+
+        int valor;
+        try {
+            valor = Integer.parseInt(valorStr);
+        } catch (NumberFormatException e) {
+            JOptionPane.showMessageDialog(null, "Debe ingresar un valor numérico.");
+            return;
+        }
+
+        cola.encolar(valor);
     }//GEN-LAST:event_itemEncolarActionPerformed
 
     private void itemRecorrerColaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_itemRecorrerColaActionPerformed
         // TODO add your handling code here:
-        
+        cola.recorrerCola();
     }//GEN-LAST:event_itemRecorrerColaActionPerformed
 
     private void itemDesencolarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_itemDesencolarActionPerformed
         // TODO add your handling code here:
-        
+        cola.desencolar();
     }//GEN-LAST:event_itemDesencolarActionPerformed
 
     public static void main(String args[]) {
