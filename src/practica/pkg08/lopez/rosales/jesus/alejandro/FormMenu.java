@@ -8,8 +8,8 @@ import javax.swing.JOptionPane;
 
 public class FormMenu extends javax.swing.JFrame {
 
-    private Pila pila;
-    private Cola cola;
+    private final Pila pila;
+    private final Cola cola;
 
     public FormMenu() {
         initComponents();
@@ -128,7 +128,7 @@ public class FormMenu extends javax.swing.JFrame {
         try {
             valor = Integer.parseInt(valorStr);
         } catch (NumberFormatException e) {
-            JOptionPane.showMessageDialog(null, "Debe ingresar un valor numérico.");
+            JOptionPane.showMessageDialog(null, "Debe ingresar un valor numérico.", "Error", JOptionPane.ERROR_MESSAGE);
             return;
         }
 
@@ -153,7 +153,7 @@ public class FormMenu extends javax.swing.JFrame {
         try {
             valor = Integer.parseInt(valorStr);
         } catch (NumberFormatException e) {
-            JOptionPane.showMessageDialog(null, "Debe ingresar un valor numérico.");
+            JOptionPane.showMessageDialog(null, "Debe ingresar un valor numérico.", "Error", JOptionPane.ERROR_MESSAGE);
             return;
         }
 

@@ -23,13 +23,13 @@ public class Pila {
             pila = nuevo;
             nuevo.setNodoSiguiente(aux);
         }
-        JOptionPane.showMessageDialog(null, "Valor agregado a la pila.");
+        JOptionPane.showMessageDialog(null, "Valor " + v + " agregado a la pila.", "Bien", JOptionPane.INFORMATION_MESSAGE);
     }
 
     public void recorrerPila() {
         Nodo aux = pila;
         if (pila == null) {
-            JOptionPane.showMessageDialog(null, "La pila está vacía.");
+            JOptionPane.showMessageDialog(null, "La pila está vacía.", "Error", JOptionPane.WARNING_MESSAGE);
         } else {
             String valores = "";
             while (aux != null) {
@@ -42,15 +42,18 @@ public class Pila {
 
     public void pop() {
         Nodo aux = pila;
+        int valor = 0;
         if (pila == null) {
-            JOptionPane.showMessageDialog(null, "La pila está vacía.");
+            JOptionPane.showMessageDialog(null, "La pila está vacía.", "Error", JOptionPane.WARNING_MESSAGE);
         } else {
             if (aux.getNodoSiguiente() == null) {
+                valor = aux.getValor();
                 pila = null;
             } else {
                 pila = aux.getNodoSiguiente();
+                valor = aux.getValor();
             }
-            JOptionPane.showMessageDialog(null, "Primer elemento eliminado de la pila.");
+            JOptionPane.showMessageDialog(null, "Elemento con valor " + valor + " eliminado de la pila.", "Bien", JOptionPane.INFORMATION_MESSAGE);
         }
     }
 

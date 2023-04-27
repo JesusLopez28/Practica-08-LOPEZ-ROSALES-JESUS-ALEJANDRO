@@ -25,13 +25,13 @@ public class Cola {
             }
             aux.setNodoSiguiente(nuevo);
         }
-        JOptionPane.showMessageDialog(null, "Valor encolado.");
+        JOptionPane.showMessageDialog(null, "Valor " + v + " encolado.", "Bien", JOptionPane.INFORMATION_MESSAGE);
     }
 
     public void recorrerCola() {
         Nodo aux = cola;
         if (cola == null) {
-            JOptionPane.showMessageDialog(null, "La cola está vacía.");
+            JOptionPane.showMessageDialog(null, "La cola está vacía.", "Error", JOptionPane.WARNING_MESSAGE);
         } else {
             String valores = "";
             while (aux != null) {
@@ -44,15 +44,18 @@ public class Cola {
 
     public void desencolar() {
         Nodo aux = cola;
+        int valor = 0;
         if (cola == null) {
-            JOptionPane.showMessageDialog(null, "La cola está vacía.");
+            JOptionPane.showMessageDialog(null, "La cola está vacía.", "Error", JOptionPane.WARNING_MESSAGE);
         } else {
             if (aux.getNodoSiguiente() == null) {
+                valor = aux.getValor();
                 cola = null;
             } else {
+                valor = aux.getValor();
                 cola = aux.getNodoSiguiente();
             }
-            JOptionPane.showMessageDialog(null, "Primer elemento eliminado de la cola.");
+            JOptionPane.showMessageDialog(null, "Elemento con valor " + valor + " eliminado de la cola.", "Bien", JOptionPane.INFORMATION_MESSAGE);
         }
     }
 
