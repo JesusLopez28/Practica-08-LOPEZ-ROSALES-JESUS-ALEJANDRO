@@ -12,42 +12,46 @@ public class Cola {
         cola = null;
     }
 
-    public void encolar(int v) {
+    public String encolar(int v) {
         Nodo nuevo = new Nodo(v);
         if (cola == null) {
             cola = nuevo;
+            return "El elemento " + v + " ha sido insertado en la cola.";
         } else {
             Nodo aux = cola;
             while (aux.getNodoSiguiente() != null) {
                 aux = aux.getNodoSiguiente();
             }
             aux.setNodoSiguiente(nuevo);
+            return "El elemento " + v + " ha sido insertado en la cola.";
         }
     }
 
-    public void recorrerCola() {
+    public String recorrerCola() {
         Nodo aux = cola;
+        String elementos = "";
         if (cola == null) {
-            System.out.println("La cola está vacía.");
+            elementos = "La cola está vacía.";
         } else {
             while (aux != null) {
-                System.out.println("Valor: " + aux.getValor());
+                elementos += "Valor: " + aux.getValor() + "\n";
                 aux = aux.getNodoSiguiente();
             }
         }
+        return elementos;
     }
 
-    public void desencolar() {
+    public String desencolar() {
         Nodo aux = cola;
         if (cola == null) {
-            System.out.println("La cola está vacía.");
+            return "La cola está vacía.";
         } else {
             if (aux.getNodoSiguiente() == null) {
                 cola = null;
             } else {
                 cola = aux.getNodoSiguiente();
             }
-            System.out.println("Primer elemento eliminado.");
+            return "El primer elemento eliminado de la cola es: " + aux.getValor();
         }
     }
 }

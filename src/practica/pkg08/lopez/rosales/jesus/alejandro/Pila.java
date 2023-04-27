@@ -12,39 +12,44 @@ public class Pila {
         pila = null;
     }
 
-    public void push(int v) {
+    public String push(int v) {
         Nodo nuevo = new Nodo(v);
         if (pila == null) {
             pila = nuevo;
+            return "El elemento " + v + " ha sido insertado en la pila.";
         } else {
             Nodo aux = pila;
             pila = nuevo;
             nuevo.setNodoSiguiente(aux);
+            return "El elemento " + v + " ha sido insertado en la pila.";
         }
     }
 
-    public void recorrerPila() {
+    public String recorrerPila() {
         Nodo aux = pila;
+        String elementos = "";
         if (pila == null) {
-            System.out.println("La pila está vacía.");
+            elementos = "La pila está vacía.";
         } else {
             while (aux != null) {
-                System.out.println("Valor: " + aux.getValor());
+                elementos += "Valor: " + aux.getValor() + "\n";
                 aux = aux.getNodoSiguiente();
             }
         }
+        return elementos;
     }
 
-    public void pop() {
+    public String pop() {
         Nodo aux = pila;
         if (pila == null) {
-            System.out.println("La pila está vacía.");
+            return "La pila está vacía.";
         } else {
             if (aux.getNodoSiguiente() == null) {
                 pila = null;
             } else {
                 pila = aux.getNodoSiguiente();
             }
+            return "El elemento eliminado de la pila es: " + aux.getValor();
         }
     }
 

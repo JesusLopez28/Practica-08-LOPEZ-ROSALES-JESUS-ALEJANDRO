@@ -115,26 +115,32 @@ public class FormMenu extends javax.swing.JFrame {
 
     private void itemPushActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_itemPushActionPerformed
         // TODO add your handling code here:
+        
     }//GEN-LAST:event_itemPushActionPerformed
 
     private void itemRecorrerPilaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_itemRecorrerPilaActionPerformed
         // TODO add your handling code here:
+        
     }//GEN-LAST:event_itemRecorrerPilaActionPerformed
 
     private void itemPopActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_itemPopActionPerformed
         // TODO add your handling code here:
+        
     }//GEN-LAST:event_itemPopActionPerformed
 
     private void itemEncolarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_itemEncolarActionPerformed
         // TODO add your handling code here:
+        
     }//GEN-LAST:event_itemEncolarActionPerformed
 
     private void itemRecorrerColaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_itemRecorrerColaActionPerformed
         // TODO add your handling code here:
+        
     }//GEN-LAST:event_itemRecorrerColaActionPerformed
 
     private void itemDesencolarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_itemDesencolarActionPerformed
         // TODO add your handling code here:
+        
     }//GEN-LAST:event_itemDesencolarActionPerformed
 
     public static void main(String args[]) {
