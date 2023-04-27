@@ -37,12 +37,27 @@ public class FormMenu extends javax.swing.JFrame {
         menuPila.setFont(new java.awt.Font("Nirmala UI", 0, 18)); // NOI18N
 
         itemPush.setText("Push");
+        itemPush.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                itemPushActionPerformed(evt);
+            }
+        });
         menuPila.add(itemPush);
 
         itemRecorrerPila.setText("Recorrer");
+        itemRecorrerPila.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                itemRecorrerPilaActionPerformed(evt);
+            }
+        });
         menuPila.add(itemRecorrerPila);
 
         itemPop.setText("Pop");
+        itemPop.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                itemPopActionPerformed(evt);
+            }
+        });
         menuPila.add(itemPop);
 
         menu.add(menuPila);
@@ -51,12 +66,27 @@ public class FormMenu extends javax.swing.JFrame {
         menuCola.setFont(new java.awt.Font("Nirmala UI", 0, 18)); // NOI18N
 
         itemEncolar.setText("Encolar");
+        itemEncolar.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                itemEncolarActionPerformed(evt);
+            }
+        });
         menuCola.add(itemEncolar);
 
         itemRecorrerCola.setText("Recorrer");
+        itemRecorrerCola.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                itemRecorrerColaActionPerformed(evt);
+            }
+        });
         menuCola.add(itemRecorrerCola);
 
         itemDesencolar.setText("Desencolar");
+        itemDesencolar.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                itemDesencolarActionPerformed(evt);
+            }
+        });
         menuCola.add(itemDesencolar);
 
         menu.add(menuCola);
@@ -82,6 +112,30 @@ public class FormMenu extends javax.swing.JFrame {
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
+
+    private void itemPushActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_itemPushActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_itemPushActionPerformed
+
+    private void itemRecorrerPilaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_itemRecorrerPilaActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_itemRecorrerPilaActionPerformed
+
+    private void itemPopActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_itemPopActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_itemPopActionPerformed
+
+    private void itemEncolarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_itemEncolarActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_itemEncolarActionPerformed
+
+    private void itemRecorrerColaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_itemRecorrerColaActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_itemRecorrerColaActionPerformed
+
+    private void itemDesencolarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_itemDesencolarActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_itemDesencolarActionPerformed
 
     public static void main(String args[]) {
         /* Set the Nimbus look and feel */
